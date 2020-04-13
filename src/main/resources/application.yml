@@ -1,0 +1,34 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: chatroom
+  # thymeleaf
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    servlet:
+      content-type: text/html   
+  # mysql 的数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/chatroom?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=UTC
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+   # jpa 配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true   
+ # 编码规则
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+     
